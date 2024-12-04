@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+</head>
+<body>
+	<!-- 서블릿에 요청시 : 서블릿의 매핑값과 일치하게  -->
+	<!-- JSP로 요청시 : 파일의 이름과 확장자 작성 -->
+    <form action="Ex07_return.jsp" method="POST">
+        <input type="text"  name="num1"><br><br>
+        
+        
+        <input type="text"  name="num2"><br><br>
+        
+        <select name="op">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        
+        <input type="submit" value="계산">
+    </form>
+</body>
+</html>
