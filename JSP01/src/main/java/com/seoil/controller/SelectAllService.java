@@ -13,25 +13,22 @@ import javax.servlet.http.HttpServletResponse;
 import com.seoil.model.Todo_DAO;
 import com.seoil.model.Todo_DTO;
 
-
 @WebServlet("/SelectAll")
 public class SelectAllService extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 1. DAO 생성
-		Todo_DAO dao = new Todo_DAO();
-		
-		// 2. DAO에 있는 selectAll 메소드 사용하기
-		// 	  => DB에서 전체 회원조회하는 기능
-		List<Todo_DTO> list = dao.selectAll();
-		
-		// 3. request scope에 전체회원정보 담아주기
-		request.setAttribute("userList", list);
-		
-		// 4. select.jsp로 forward 방식으로 이동
-		RequestDispatcher rd = request.getRequestDispatcher("select.jsp");
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // 1. DAO 생성
+        Todo_DAO dao = new Todo_DAO();
+        
+        // 2. DAO에 있는 selectAll 메소드 사용하기
+        List<Todo_DTO> list = dao.selectAll();
+        
+        // 3. request scope에 전체 회원정보 담아주기
+        request.setAttribute("userList", list);
+        
+        // 4. select.jsp로 forward 방식으로 이동
+        RequestDispatcher rd = request.getRequestDispatcher("select.jsp");
         rd.forward(request, response);
-	}
-
+    }
 }

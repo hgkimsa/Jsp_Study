@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE configuration
+<!DOCTYPE configuration 
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
     <!-- 데이터베이스 환경 설정 -->
     <environments default="development">
-        <!-- 'development'라는 ID를 가진 환경 정의 -->
         <environment id="development">
-            <!-- JDBC 트랜잭션 관리자를 사용하도록 설정 -->
             <transactionManager type="JDBC"/>
-            <!-- 데이터 소스 풀링 방식으로 설정 -->
             <dataSource type="POOLED">
-                <!-- 사용할 JDBC 드라이버 클래스 -->
                 <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
-                <!-- 데이터베이스 연결 URL -->
                 <property name="url" value="jdbc:oracle:thin:@project-db-cgi.smhrd.com:1524:xe"/>
-                <!-- 데이터베이스 사용자 이름 -->
                 <property name="username" value="cgi_24k_bigdata26_p2_4"/>
-                <!-- 데이터베이스 비밀번호 -->
                 <property name="password" value="smhrd4"/>
             </dataSource>
         </environment>
@@ -26,7 +19,6 @@
 
     <!-- SQL 매퍼 정의 -->
     <mappers>
-        <!-- 멤버 작업을 위한 매퍼 파일 지정 -->
         <mapper resource="com/seoil/db/TodoMapper.xml"/>
     </mappers>
 </configuration>
