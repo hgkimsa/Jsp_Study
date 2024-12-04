@@ -1,0 +1,6 @@
+<mapper namespace="com.codenest.db.MemberMapper">
+    <select id="userList" parameterType="String" resultType="com.seoil.model.Todo_DTO">
+        SELECT *
+        FROM todo_list
+    </select>
+</mapper>
