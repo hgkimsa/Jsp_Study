@@ -4,6 +4,16 @@
   "https://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
+    <settings>
+        <!-- null 값 처리를 위한 설정 추가 -->
+        <setting name="jdbcTypeForNull" value="NULL" />
+    </settings>
+
+    <typeHandlers> 
+        <!-- Date 타입을 TIMESTAMP로 처리하는 핸들러 설정 --> 
+        <typeHandler handler="org.apache.ibatis.type.DateTypeHandler" javaType="java.util.Date" jdbcType="TIMESTAMP"/> 
+    </typeHandlers>
+
     <!-- 데이터베이스 환경 설정 -->
     <environments default="development">
         <!-- 'development'라는 ID를 가진 환경 정의 -->
