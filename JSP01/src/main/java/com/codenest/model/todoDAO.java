@@ -12,6 +12,7 @@ public class todoDAO {
 
     SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
     
+    
     // 모든 todo 항목을 가져오는 메소드
     public ArrayList<todoDTO> getAllTodos() {
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
