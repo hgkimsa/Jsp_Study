@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.codenest.db.TodoMapper">
+
+    <select id="getAllTodos" resultType="com.codenest.model.todoDTO">
+        SELECT * FROM TODO_LIST
+    </select>
+
+    <insert id="addTodo" parameterType="com.codenest.model.todoDTO">
+        INSERT INTO TODO_LIST (IDX, GOOGLE_ACCOUNT, TODO_STARTDATE, TODO_DEADDATE, TODO_MEMO, TODO_FILE_PATH, IS_IMPORTANT, CREATED_AT)
+        VALUES (#{idx}, #{google_account}, #{todo_startdate}, #{todo_deaddate}, #{todo_memo}, #{todo_file_path}, #{is_important}, CURRENT_TIMESTAMP)
+    </insert>
+</mapper>
