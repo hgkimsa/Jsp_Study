@@ -39,6 +39,7 @@ public class Login extends HttpServlet {
         if (result != null) { // 로그인 성공 시
             HttpSession session = request.getSession(); // 세션 생성
             session.setAttribute("google_account", google); // 구글 계정을 세션에 저장
+            session.setAttribute("password", pw); // 비밀번호을 세션에 저장
             request.setAttribute("successMessage", "로그인 성공!"); // 성공 메시지 추가
             response.sendRedirect("update.jsp"); // 로그인 성공 후 홈 페이지로 리다이렉트
             System.out.println("로그인 성공!"); // 콘솔에 로그인 성공 메시지 출력

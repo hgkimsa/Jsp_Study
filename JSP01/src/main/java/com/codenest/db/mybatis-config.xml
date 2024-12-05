@@ -28,5 +28,6 @@
     <mappers>
         <!-- 멤버 작업을 위한 매퍼 파일 지정 -->
         <mapper resource="com/codenest/db/MemberMapper.xml"/>
+        <mapper resource="com/codenest/db/TodoMapper.xml"/>        
     </mappers>
 </configuration>

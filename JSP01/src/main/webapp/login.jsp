@@ -18,11 +18,14 @@
         // 세션에서 사용자 정보를 가져오기
         HttpSession userSession = request.getSession();
         String googleAccount = (String) userSession.getAttribute("google_account");
-        
+        String pw = (String)userSession.getAttribute("password");
         if (googleAccount != null) {
             // 로그인 성공 시 환영 메시지 및 버튼 표시
     %>
             <h2>환영합니다, <%= googleAccount %>님!</h2>
+            <h2>ID: <%= googleAccount %>님!</h2>
+            <h2>pw: <%= pw %></h2>
+            
             <!-- 정보 수정 및 로그아웃 버튼 추가 -->
             <form method="post">
                 <button type="button" class="w3-button w3-orange" onclick="location.href='update.jsp';">정보 수정</button>
