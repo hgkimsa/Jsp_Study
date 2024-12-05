@@ -8,6 +8,6 @@
 
     <insert id="addTodo" parameterType="com.codenest.model.todoDTO">
         INSERT INTO TODO_LIST (IDX, GOOGLE_ACCOUNT, TODO_STARTDATE, TODO_DEADDATE, TODO_MEMO, TODO_FILE_PATH, IS_IMPORTANT, CREATED_AT)
-        VALUES (#{idx}, #{google_account}, #{todo_startdate}, #{todo_deaddate}, #{todo_memo}, #{todo_file_path}, #{is_important}, CURRENT_TIMESTAMP)
+        VALUES (idx_SEQ.NEXTVAL, #{google_account}, #{todo_startdate}, #{todo_deaddate}, #{todo_memo}, #{todo_file_path}, #{is_important}, CURRENT_TIMESTAMP)
     </insert>
 </mapper>

@@ -2,7 +2,6 @@ package com.codenest.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import com.codenest.db.SqlSessionManager;
