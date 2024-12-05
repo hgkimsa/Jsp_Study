@@ -40,9 +40,9 @@ public class AddTodoServlet extends HttpServlet {
 
         // Handle response accordingly
         if (isAdded) {
-            response.sendRedirect("success.jsp"); // Redirect on success
+            response.sendRedirect("Message.jsp"); // Redirect on success
         } else {
-            response.sendRedirect("error.jsp"); // Redirect on failure
+            response.sendRedirect("todo.jsp"); // Redirect on failure
         }
     }
 }
