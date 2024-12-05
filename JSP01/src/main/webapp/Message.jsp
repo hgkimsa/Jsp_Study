@@ -11,10 +11,10 @@
 <body>
     <h1>Todo List</h1>
     <%
-        todoDAO dao = new todoDAO();
-        ArrayList<todoDTO> list = dao.getAllTodos(); // 모든 todo 항목을 가져오는 메소드
-        
-        if(list != null && !list.isEmpty()) {
+    todoDAO dao = new todoDAO();
+                        ArrayList<todoDTO> list = dao.getAllTodos(); // 모든 todo 항목을 가져오는 메소드
+                        
+                        if(list != null && !list.isEmpty()) {
     %>
         <table border="1">
             <tr>
@@ -27,7 +27,9 @@
                 <th>중요도</th>
                 <th>생성일</th>
             </tr>
-            <% for(todoDTO todo : list) { %>
+            <%
+            for(todoDTO todo : list) {
+            %>
                 <tr>
                     <td><%= todo.getIdx() %></td>
                     <td><%= todo.getGoogle_account() %></td>
