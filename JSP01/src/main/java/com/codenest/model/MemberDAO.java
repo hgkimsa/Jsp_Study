@@ -2,6 +2,7 @@ package com.codenest.model;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+
 import com.codenest.db.SqlSessionManager;
 
 public class MemberDAO {

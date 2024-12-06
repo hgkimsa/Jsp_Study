@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Work</title>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #3e50b4;
+            color: white;
+            padding: 35px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header-text {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .date-range {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .date-range input {
+            flex: 1;
+        }
+        textarea.form-control {
+            height: 120px;
+            resize: vertical;
+        }
+        .file-upload {
+            display: flex;
+            align-items: center;
+        }
+        .file-upload input[type="file"] {
+            flex: 1;
+        }
+        .file-upload-icon {
+            background-color: #4052B5;
+            color: white;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn-primary {
+            background-color: #4052B5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .inquiry-btn {
+            position: fixed;
+            top: 35px;
+            right: 20px;
+            background-color: #fff;
+            border: 2px solid #3e50b4;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+            font-weight: normal;
+            color: #000; 
+        }
+        .inquiry-btn:hover {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-text">Astro Work</h1>
+    </header>
+    <button class="inquiry-btn">문의하기</button>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label class="form-label">일시</label>
+                <div class="date-range">
+                    <input type="date" class="form-control" />
+                    <span>~</span>
+                    <input type="date" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">일정</label>
+                <input type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="form-label">세부사항</label>
+                <textarea class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-label">파일 업로드</label>
+                <div class="file-upload">
+                    <input type="file" class="form-control" />
+                    <div class="file-upload-icon">↑</div>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="submit" class="btn btn-primary">저장</button>
+                <button type="button" class="btn btn-secondary">취소</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
