@@ -26,7 +26,7 @@
                 <div class="col-sm-3">
                     <input type="text" id="productId" name="productId" class="form-control">
                 </div>
-            </div>
+            </div> 
             <div class="form-group row">
                 <label class="col-sm-2"><fmt:message key="pname" /></label>
                 <div class="col-sm-3">
