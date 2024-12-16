@@ -2,7 +2,7 @@
 
 <html>
 <head>
-<link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
 <title>배송 정보</title>
 </head>
 <body>
