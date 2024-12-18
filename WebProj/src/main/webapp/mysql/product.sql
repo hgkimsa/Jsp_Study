@@ -1,14 +1,12 @@
-CREATE TABLE IF NOT EXISTS product(
-    p_id VARCHAR(10) NOT NULL,
-    p_name VARCHAR(10),
-    p_unitPrice INTEGER,
-    p_description TEXT,
-    p_category VARCHAR(20),
-    p_manufacturer VARCHAR(20),
-    p_unitsInStock LONG,
-    p_condition VARCHAR(20),
-    p_fileName VARCHAR(20),
-    PRIMARY KEY (p_id)
-) DEFAULT CHARSET=utf8;
-
-ALTER TABLE product MODIFY COLUMN p_name VARCHAR(20);
+create table member (
+	id varchar(10) not null, // 회원 아이디
+	password varchar(10) not null, // 비밀번호
+	name varchar(10) not null, // 이름
+	gender varchar(4), // 성별
+	birth varchar(10), // 생일
+	mail varchar(30), // 메일
+	phone varchar(30), // 전화번호
+	address varchar(90), // 주소
+	regist_day varchar(50), // 가입 일자
+	primary key(id)  // 회원 아이디를 고유 키로 설정
+) default CHARSET=utf8;

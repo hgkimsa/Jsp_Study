@@ -1,27 +1,26 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.Date" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Welcome</title>
-<link rel = "stylesheet" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
 </head>
 <body>
 	<%@ include file="menu.jsp" %>
 	<%! String greeting = "웹 쇼핑몰에 오신 것을 환영합니다";
 		String tagline = "Welcome to Web Market!"; %>
-		<div class = "jumbotron">
-			<div class = "center">
-				<h1 class = "display-3">
+		<div class="jumbotron">
+			<div class="center">
+				<h1 class="display-3">
 					<%= greeting %>
 				</h1>						
 			</div>
 		</div>
 	
-		<div class = "container">
-			<div class = "text-center">
+		<div class="container">
+			<div class="text-center">
 				<h3>
 					<%= tagline %>
 				</h3>
@@ -36,7 +35,7 @@
 						am_pm = "AM";
 					} else {
 						am_pm = "PM";
-						hour = hour -12;
+						hour = hour - 12;
 					}
 					String CT = hour + ":" + minute + ":" + second + " " + am_pm;
 					out.println("현재 접속 시각: " + CT + "\n");
