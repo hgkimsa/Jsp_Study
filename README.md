@@ -1,6 +1,9 @@
 메인 페이지
 ![image](https://github.com/user-attachments/assets/6d7413f0-8bc8-42d2-a8bc-89c428aa0c33)
 
+회원가입
+![image](https://github.com/user-attachments/assets/065dc468-be64-4685-bcf4-8de5edec92b1)
+
 로그인 화면
 ![image](https://github.com/user-attachments/assets/af1bcbc0-feae-48c0-89d1-f3fc2d6a6ab6)
 
