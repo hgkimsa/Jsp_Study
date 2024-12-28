@@ -44,6 +44,12 @@
 상품 삭제
 ![image](https://github.com/user-attachments/assets/d57816f9-b250-41a5-8d78-68ec64fd5d04)
 
+페이지 오류 
+![image](https://github.com/user-attachments/assets/5920c5d3-7628-4317-9154-a59879149115)
+
+상품이 존재하지 않는다.
+![image](https://github.com/user-attachments/assets/49964d35-2060-4632-a8cb-6b8973fdbac5)
+
 게시판 
 ![image](https://github.com/user-attachments/assets/28e617b2-948e-47e2-9031-1d3c953fd75f)
 ![image](https://github.com/user-attachments/assets/a62a740d-44c1-4b9a-8dba-c8ee039dfd5e)
