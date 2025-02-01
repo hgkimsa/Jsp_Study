@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPAndTech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/Project/css/SecondPage.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-leaf"></i> SPAndTech
+        </div>
+        <div class="nav-links">
+            <a href="#">홈</a>
+            <a href="#">마이페이지</a>
+            <a href="#">설정</a>
+            <a href="#">리스크</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="종목명, 종목코드 검색">
+        </div>
+        <button class="btn-login">로그인</button>
+    </nav>
+
+    <main class="main-content">
+        <section class="sentiment-news">
+            <div class="news-header">
+                <div class="news-icon positive">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+                <h2 class="section-title">긍정 뉴스</h2>
+            </div>
+            <div class="news-item">
+                <div class="news-title">반도체 수출 증가세 지속, 전년 대비 15% 상승</div>
+                <div class="news-meta">5분 전 • 경제신문</div>
+            </div>
+            <div class="news-item">
+                <div class="news-title">주요 기업 실적 전망치 상향 조정</div>
+                <div class="news-meta">15분 전 • 테크뉴스</div>
+            </div>
+            <div class="news-item">
+                <div class="news-title">글로벌 투자자금 국내 주식시장 유입 확대</div>
+                <div class="news-meta">30분 전 • 투자저널</div>
+            </div>
+        </section>
+
+        <section class="sentiment-news">
+            <div class="news-header">
+                <div class="news-icon negative">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <h2 class="section-title">부정 뉴스</h2>
+            </div>
+            <div class="news-item">
+                <div class="news-title">원자재 가격 상승으로 기업 부담 가중</div>
+                <div class="news-meta">10분 전 • 경제신문</div>
+            </div>
+            <div class="news-item">
+                <div class="news-title">미 연준 금리 인상 우려 확대</div>
+                <div class="news-meta">20분 전 • 글로벌뉴스</div>
+            </div>
+            <div class="news-item">
+                <div class="news-title">중국 경기 둔화 조짐에 수출기업 우려</div>
+                <div class="news-meta">35분 전 • 투자저널</div>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <div class="stock-info">
+                <div class="stock-name">삼성전자 (005930)</div>
+                <div class="stock-price">72,300원</div>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="stockChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const ctx = document.getElementById('stockChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '15:30'],
+                datasets: [{
+                    label: '주가',
+                    data: [71000, 71200, 71800, 71500, 72100, 72400, 72300, 72300],
+                    borderColor: '#326CF9',
+                    backgroundColor: 'rgba(50, 108, 249, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: '삼성전자 주가 (원)'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        ticks: {
+                            callback: function(value) {
+                                return value.toLocaleString() + '원';
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
